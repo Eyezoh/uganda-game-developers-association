@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Uganda Games Association">
+  <path d="M32 3.5 56 12v20.5c0 12.6-9.6 21.8-24 25.2C17.6 54.3 8 45.1 8 32.5V12L32 3.5Z" fill="#14161b"/>
+  <path d="M32 3.5 56 12v20.5c0 12.6-9.6 21.8-24 25.2C17.6 54.3 8 45.1 8 32.5V12L32 3.5Z" fill="none" stroke="#f5c518" stroke-width="3"/>
+  <rect x="15" y="20" width="34" height="20" rx="9" fill="#f5c518"/>
+  <rect x="20.5" y="28.6" width="9.5" height="2.8" rx="1.4" fill="#14161b"/>
+  <rect x="23.85" y="25.25" width="2.8" height="9.5" rx="1.4" fill="#14161b"/>
+  <circle cx="38.5" cy="27" r="2.6" fill="#14161b"/>
+  <circle cx="43.2" cy="32" r="2.6" fill="#14161b"/>
+  <rect x="23" y="45" width="8" height="3.2" rx="1.6" fill="#f5c518"/>
+  <rect x="33" y="45" width="8" height="3.2" rx="1.6" fill="#d21034"/>
+</svg>
