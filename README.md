@@ -1,6 +1,6 @@
-# Uganda Games Association — website
+# Uganda Game Developers Association — website
 
-A static marketing site for the **Uganda Games Association (UGA)**, the trade body
+A static marketing site for the **Uganda Game Developers Association (UGDA)**, the trade body
 representing studios, developers, artists and educators making games in Uganda.
 
 The information architecture and page structure follow the
@@ -101,15 +101,15 @@ need real values:
       backend) before launch.
 - [ ] **Content is placeholder copy.** Member names in the directory, event dates,
       news posts, team members, the address, phone number and email addresses are all
-      illustrative and must be replaced with real UGA details.
+      illustrative and must be replaced with real UGDA details.
 - [ ] **Membership fees** are described as bands rather than figures; add real numbers.
 - [ ] **Social links** in the footer point to `#`.
 - [ ] **Canonical URLs** in each page's `<head>` assume
-      `https://ugandagamesassociation.org/` — update to the real domain.
+      `https://ugandagamedevelopers.org/` — update to the real domain.
 - [ ] Add an Open Graph share image (`og:image`) — the meta tags are in place but no
       image is referenced yet.
 
 ## Licence
 
 Code is MIT licensed (see [LICENSE](LICENSE)). Site content and branding belong to the
-Uganda Games Association.
+Uganda Game Developers Association.

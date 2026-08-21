@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Uganda Games Association — design system
+   Uganda Game Developers Association — design system
    Palette derives from the national flag: black, gold, red.
    ========================================================================== */
 
@@ -175,9 +175,9 @@ li { margin-bottom: .4em; }
   min-height: var(--header-h);
 }
 
-.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .brand__mark { width: 38px; height: 38px; flex-shrink: 0; }
-.brand__text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand__text { display: flex; flex-direction: column; line-height: 1.1; min-width: 0; }
 .brand__name {
   font-family: var(--font-head);
   font-weight: 700;
@@ -727,7 +727,9 @@ li { margin-bottom: .4em; }
   .stats { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 860px) {
+/* The wordmark is long, so the horizontal nav runs out of room well above the
+   layout breakpoint. Collapse the nav on its own, earlier. */
+@media (max-width: 1040px) {
   .nav-toggle { display: flex; }
   .nav {
     display: none;
@@ -745,8 +747,9 @@ li { margin-bottom: .4em; }
   .nav__link { padding: 13px 12px; font-size: 1rem; }
   .nav__cta { margin: 12px 0 0; }
   .nav__cta .btn { width: 100%; }
-  .site-header { position: relative; }
+}
 
+@media (max-width: 860px) {
   .grid--3, .grid--2 { grid-template-columns: 1fr; }
   .split { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
@@ -757,6 +760,8 @@ li { margin-bottom: .4em; }
 
 @media (max-width: 560px) {
   body { font-size: 16px; }
+  .brand__name { font-size: .92rem; }
+  .brand__sub { font-size: .62rem; }
   .grid--4, .stats { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .newsletter__form { flex-direction: column; }

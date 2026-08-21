@@ -1,4 +1,4 @@
-/* Uganda Games Association — site behaviour.
+/* Uganda Game Developers Association — site behaviour.
    No dependencies; every page loads this one file. */
 (function () {
   'use strict';
