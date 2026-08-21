@@ -10,6 +10,23 @@ from the Ugandan flag (black, gold, red) rather than the DGA's navy and orange.
 
 ## Live site
 
+The site is deployed to two hosts, both serving the same `main` branch.
+
+| Host | URL | Deploys on |
+| --- | --- | --- |
+| Vercel | https://uganda-games-association.vercel.app | push to `main` |
+| GitHub Pages | https://eyezoh.github.io/uganda-game-developers-association/ | push to `main` |
+
+> **Note:** the Vercel project is still named after the repository's original name, so
+> its `.vercel.app` subdomain reads `uganda-games-association`. Renaming the project in
+> **Vercel → Settings → General → Project Name** changes that subdomain — and will break
+> the existing `.vercel.app` link, so do it before sharing the URL widely.
+
+Vercel's Git integration tracks the repository by internal ID rather than by name, so
+renaming the GitHub repo does not break the connection.
+
+### GitHub Pages
+
 The site is plain static files, so GitHub Pages can serve it straight from the branch —
 no build and no workflow needed.
 
