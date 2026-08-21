@@ -16,7 +16,7 @@ no build and no workflow needed.
 **Settings → Pages → Build and deployment → Source: _Deploy from a branch_ →
 Branch: `main`, folder: `/ (root)` → Save.**
 
-The site then publishes at `https://<user>.github.io/uganda-games-association/`.
+The site then publishes at `https://<user>.github.io/uganda-game-developers-association/`.
 
 <details>
 <summary>Optional: deploy with GitHub Actions instead</summary>
