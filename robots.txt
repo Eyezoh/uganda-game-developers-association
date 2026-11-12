@@ -1,0 +1,6 @@
+# Uganda Game Developers Association - https://www.ugda.ug/
+# Every crawler is welcome, including search engines and AI assistants.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ugda.ug/sitemap.xml

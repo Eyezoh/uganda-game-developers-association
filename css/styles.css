@@ -720,6 +720,25 @@ li { margin-bottom: .4em; }
 }
 .skip-link:focus { top: 0; color: #fff; }
 
+/* --------------------------------------------------------------- prose -- */
+/* Long-form text with inline links and citations (guide page, about story). */
+.prose { max-width: 780px; }
+.wrap.prose { margin-inline: auto; }
+.prose h2 { margin-top: 1.8em; }
+.prose h2:first-of-type { margin-top: .6em; }
+.prose h3 { margin-top: 1.4em; }
+.prose p a, .prose li a, .sources a, .faq__a a {
+  text-decoration: underline;
+  text-decoration-color: var(--gold-dark);
+  text-underline-offset: 3px;
+}
+.cite { font-size: .7em; line-height: 0; margin-left: 1px; }
+.prose .cite a, .cite a { text-decoration: none; color: var(--gold-dark); font-weight: 500; }
+.updated { font-size: .9rem; color: var(--muted); }
+.sources { font-size: .92rem; color: var(--muted); padding-left: 1.4em; }
+.sources li { margin-bottom: .7em; }
+.sources li:target { background: var(--gold-soft); }
+
 /* --------------------------------------------------------- responsive -- */
 @media (max-width: 980px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }

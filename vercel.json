@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "uganda-games-association.vercel.app" }],
+      "destination": "https://www.ugda.ug/:path*",
+      "permanent": true
+    }
+  ]
+}

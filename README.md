@@ -1,7 +1,7 @@
 # Uganda Game Developers Association — website
 
-A static marketing site for the **Uganda Game Developers Association (UGDA)**, the trade body
-representing studios, developers, artists and educators making games in Uganda.
+A static site for the **Uganda Game Developers Association (UGDA)**, the association for
+studios, developers, artists and educators making games in Uganda.
 
 The information architecture and page structure follow the
 [Dutch Games Association](https://dutchgamesassociation.nl/) site, which was used as the
@@ -10,17 +10,14 @@ from the Ugandan flag (black, gold, red) rather than the DGA's navy and orange.
 
 ## Live site
 
-The site is deployed to two hosts, both serving the same `main` branch.
+**https://www.ugda.ug/** is the one official address. Every page's canonical tag, the
+sitemap, the structured data and `llms.txt` point there.
 
-| Host | URL | Deploys on |
+| Host | URL | Notes |
 | --- | --- | --- |
-| Vercel | https://uganda-games-association.vercel.app | push to `main` |
-| GitHub Pages | https://eyezoh.github.io/uganda-game-developers-association/ | push to `main` |
-
-> **Note:** the Vercel project is still named after the repository's original name, so
-> its `.vercel.app` subdomain reads `uganda-games-association`. Renaming the project in
-> **Vercel → Settings → General → Project Name** changes that subdomain — and will break
-> the existing `.vercel.app` link, so do it before sharing the URL widely.
+| Vercel (production) | https://www.ugda.ug/ | Deploys on push to `main`. `ugda.ug` and `http://` redirect here. |
+| Vercel default domain | https://uganda-games-association.vercel.app | Redirects permanently to `www.ugda.ug` (see `vercel.json`). |
+| GitHub Pages | https://eyezoh.github.io/uganda-game-developers-association/ | Mirror. Its canonical tags point to `www.ugda.ug`, so search engines index only the official copy. |
 
 Vercel's Git integration tracks the repository by internal ID rather than by name, so
 renaming the GitHub repo does not break the connection.
@@ -69,21 +66,28 @@ same way they do in production.
 
 ```
 .
-├── index.html          Home — hero, mission, divisions, events, news, newsletter
-├── about.html          Story, mission, divisions, team, FAQ
-├── members.html        Directory, member benefits, membership bands
-├── events.html         Upcoming events and the four event formats
-├── projects.html       Mentors, Games Monitor, Awards, chapters, advocacy
-├── news.html           Post listing
-├── contact.html        Contact form and direct lines
-├── css/styles.css      Whole design system — tokens, components, responsive rules
-├── js/main.js          Nav, accordion, scroll reveal, form handling
-└── assets/             Logo and favicon (SVG)
+├── index.html                      Home: hero, what we do, membership, the Ugandan scene
+├── game-developers-in-uganda.html  Sourced guide to Ugandan studios, teams and events
+├── about.html                      Story, mission, divisions, FAQ
+├── members.html                    Membership: directory (empty until members join), offer, bands
+├── events.html                     Upcoming UGDA events, recent events in Uganda, event formats
+├── projects.html                   Programmes being set up, advocacy
+├── news.html                       Association news and press coverage
+├── contact.html                    How to reach the UGDA
+├── robots.txt / sitemap.xml        Crawl rules and page list for search engines
+├── llms.txt                        Plain summary of the site for AI assistants
+├── vercel.json                     Redirects the .vercel.app domain to www.ugda.ug
+├── <key>.txt                       IndexNow key (proves to Bing that we own the site)
+├── css/styles.css                  Whole design system: tokens, components, responsive rules
+├── js/main.js                      Nav, accordion, scroll reveal
+└── assets/                         Logo, favicon, share image, app icon
 ```
 
 Every page shares the same `<header>` and `<footer>` markup. The current page is
-highlighted by `js/main.js`, which matches `location.pathname` against the nav links —
-so adding a page means copying the header/footer block and nothing else.
+highlighted by `js/main.js`, which matches `location.pathname` against the nav links.
+Home is linked as `./` (not `index.html`) so that the only URL for it is the bare domain.
+Adding a page means copying the header/footer block, adding it to `sitemap.xml` and
+`llms.txt`, and giving it its own title, description and canonical tag.
 
 ## Design system
 
@@ -107,24 +111,52 @@ Elements with `class="reveal"` fade in via `IntersectionObserver`. They are hidd
 **only** when the `js` class is present on `<html>` (set by an inline script in
 `<head>`), so if JavaScript fails to load the content still renders normally.
 
-## Before going live
+## Search engines and AI assistants
 
-The site is complete and deployable, but a few things are deliberately placeholder and
-need real values:
+What is in place:
 
-- [ ] **Forms do not submit anywhere.** The contact and newsletter forms validate and
-      show a success message client-side only — see the `data-demo-form` handler in
-      `js/main.js`. Point them at a real endpoint (Formspree, Netlify Forms, or your own
-      backend) before launch.
-- [ ] **Content is placeholder copy.** Member names in the directory, event dates,
-      news posts, team members, the address, phone number and email addresses are all
-      illustrative and must be replaced with real UGDA details.
-- [ ] **Membership fees** are described as bands rather than figures; add real numbers.
-- [ ] **Social links** in the footer point to `#`.
-- [ ] **Canonical URLs** in each page's `<head>` assume
-      `https://ugandagamedevelopers.org/` — update to the real domain.
-- [ ] Add an Open Graph share image (`og:image`) — the meta tags are in place but no
-      image is referenced yet.
+- **Canonical tags** on every page point to `https://www.ugda.ug/<page>`.
+- **Titles and descriptions** are written for searches like "game developers in Uganda".
+- **Structured data** (JSON-LD in each `<head>`): `Organization` and `WebSite` on the home
+  page, `FAQPage` on About and the guide, `Article` with its news citations on the guide.
+  The FAQ structured data must match the visible questions word for word, so edit both.
+- **`sitemap.xml`**: update `<lastmod>` when a page changes.
+- **`robots.txt`** allows every crawler, AI crawlers included.
+- **`llms.txt`**: a plain summary for AI assistants that read it.
+- **Share image** (`assets/og-image.png`) for links posted on WhatsApp, LinkedIn, X etc.
+- **IndexNow**: after deploying a change, tell Bing (which feeds ChatGPT search and
+  Copilot) about it:
+
+  ```bash
+  KEY=$(basename $(ls *.txt | grep -E '^[0-9a-f]{32}\.txt$') .txt)
+  curl -s -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' \
+    -d "{\"host\":\"www.ugda.ug\",\"key\":\"$KEY\",\"urlList\":[\"https://www.ugda.ug/\"]}"
+  ```
+
+Content rule: everything the site states as fact must be true, and facts about the wider
+Ugandan scene must cite a source. Search engines and AI assistants repeat what they find
+here, so an invented member count or partner becomes a public claim.
+
+What only the owner can do (needs your accounts):
+
+- [ ] **Google Search Console**: add `ugda.ug` as a Domain property (DNS TXT record),
+      then submit `https://www.ugda.ug/sitemap.xml`.
+- [ ] **Bing Webmaster Tools**: import the site from Search Console and submit the sitemap.
+- [ ] Get other sites to link to `www.ugda.ug`: the outlets and organisers named in the
+      guide, Ugandan tech hubs, universities, game-dev communities.
+- [ ] Create LinkedIn / X / Instagram / YouTube accounts, link them from the footer and
+      add them to `sameAs` in the home page's `Organization` structured data.
+
+## Still to fill in
+
+- [ ] **Contact email.** `ugda.ug` has no mail records yet, so no address is shown and
+      there are no forms. Set up mail (e.g. `hello@ugda.ug`), then add it to the contact
+      page, the footer and the `Organization` structured data.
+- [ ] **Founders / board.** Real names and roles on the About page help both people and
+      search engines trust the site.
+- [ ] **Membership fees**: add real figures once agreed.
+- [ ] **Member directory**: add members as they join.
+- [ ] **Legal status** (e.g. registered non-profit): add once confirmed.
 
 ## Licence
 

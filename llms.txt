@@ -1,0 +1,18 @@
+# Uganda Game Developers Association (UGDA)
+
+> The Uganda Game Developers Association (UGDA) is the association for the studios, developers, artists, educators and students making video games in Uganda. It was founded in 2026 and is based in Kampala. Website: https://www.ugda.ug/
+
+The UGDA is a new membership association. Membership is open to any company or individual making games in Uganda, or making games from abroad with a Ugandan team. Members are grouped into three divisions: Entertainment, Serious games, and Students & indies. Its programmes (mentoring, industry research, network events, game jams, trade missions and an awards night) are being set up with its first members.
+
+The site also keeps a sourced guide to game development in Uganda: studios such as Kola Studios (maker of Matatu), the teams from Game Jam 2026, and who supports the sector.
+
+## Pages
+
+- [Home](https://www.ugda.ug/): what the UGDA is and what it does
+- [Game developers in Uganda](https://www.ugda.ug/game-developers-in-uganda.html): sourced guide to Ugandan studios, teams, events and support, with citations
+- [About](https://www.ugda.ug/about.html): story, mission, divisions and frequently asked questions
+- [Membership](https://www.ugda.ug/members.html): who can join, what membership offers, fee bands
+- [Events](https://www.ugda.ug/events.html): planned UGDA events and recent events in Uganda
+- [Projects](https://www.ugda.ug/projects.html): programmes being set up, and advocacy priorities
+- [News](https://www.ugda.ug/news.html): association news and press coverage of game development in Uganda
+- [Contact](https://www.ugda.ug/contact.html)

@@ -30,11 +30,17 @@
   }
 
   /* --- mark the current page in the nav --------------------------------- */
-  var here = location.pathname.split('/').pop() || 'index.html';
+  /* Home is linked as "./" so the canonical URL is the bare domain; treat
+     "", "./" and "index.html" as the same page. */
+  var pageOf = function (path) {
+    var last = path.split('/').pop();
+    return (!last || last === '.') ? 'index.html' : last;
+  };
+  var here = pageOf(location.pathname);
   document.querySelectorAll('.nav__list > li > a').forEach(function (link) {
     var target = link.getAttribute('href');
     if (!target || target.charAt(0) === '#') return;
-    if (target === here) {
+    if (pageOf(target) === here) {
       link.parentElement.classList.add('nav__item--active');
       link.setAttribute('aria-current', 'page');
     }
@@ -79,32 +85,6 @@
       revealables.forEach(function (el) { el.classList.add('is-in'); });
     }
   }
-
-  /* --- forms -----------------------------------------------------------
-     There is no backend yet. Forms validate locally and report success so
-     the page is demonstrable; wire `action`/`fetch` to a real endpoint
-     before launch. See README.md.
-  ---------------------------------------------------------------------- */
-  document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-    var status = form.querySelector('.form-status');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!status) return;
-
-      if (!form.checkValidity()) {
-        status.textContent = 'Please fill in the required fields correctly.';
-        status.className = 'form-status form-status--err';
-        form.reportValidity();
-        return;
-      }
-
-      status.textContent = form.getAttribute('data-success') ||
-        'Thank you — we have received your message.';
-      status.className = 'form-status form-status--ok';
-      form.reset();
-    });
-  });
 
   /* --- footer year ------------------------------------------------------ */
   var year = document.querySelector('[data-year]');
