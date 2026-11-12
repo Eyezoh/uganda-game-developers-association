@@ -6,9 +6,9 @@ Founder: Isaac Amumpaire, who works at Birungi Studio, founded the UGDA in 2026 
 
 Partners:
 - Birungi Studio (https://birungi.studio/): a social-impact game studio, maker of the game I Bee Xploring.
-- Kelele Collective (https://kelelecollective.org/): a Kampala community for multimedia creatives that organised a meetup on game development in Uganda. Birungi Studio and Kelele Collective have partnered to grow the game development community in Uganda.
+- Kelele Collective (https://kelelecollective.org/): a Kampala community that organises multimedia meetups for creatives. Its very first game developers' meetup, organised with Birungi Studio, was the first of its kind; afterwards Birungi Studio and Kelele Collective became partners.
 
-On 10 September 2026 the UGDA's founder was invited to the Nordic-Uganda Partnership Day in Kampala, hosted by the embassies of Denmark, Sweden and Iceland, where Kelele Collective screened Ugandan games and ran a micro game pitch challenge.
+On 10 September 2026 Birungi Studio was invited to the Nordic-Uganda Partnership Day in Kampala, hosted by the embassies of Denmark, Sweden and Iceland, where Kelele Collective screened Ugandan games and ran a micro game pitch challenge.
 
 The UGDA is a new membership association. Membership is open to any company or individual making games in Uganda, or making games from abroad with a Ugandan team. Members are grouped into three divisions: Entertainment, Serious games, and Students & indies. Its programmes (mentoring, industry research, network events, game jams, trade missions and an awards night) are being set up with its first members.
 

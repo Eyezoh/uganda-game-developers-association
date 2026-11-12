@@ -154,7 +154,7 @@ What only the owner can do (needs your accounts):
       page, the footer and the `Organization` structured data.
 - [ ] **Team.** The founder (Isaac Amumpaire) is on the About page; add board members or
       other team members as they join.
-- [ ] **Dates** for the Kelele Collective game-development meetup and the Birungi Studio /
+- [ ] **Dates** for Kelele Collective's first game developers' meetup and the Birungi Studio /
       Kelele Collective partnership (news posts currently say "2026").
 - [ ] **Membership fees**: add real figures once agreed.
 - [ ] **Member directory**: add members as they join.
