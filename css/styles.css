@@ -739,6 +739,29 @@ li { margin-bottom: .4em; }
 .sources li { margin-bottom: .7em; }
 .sources li:target { background: var(--gold-soft); }
 
+/* ------------------------------------------------------------ partners -- */
+/* Dark cards so both partner logos (white / orange artwork) read well on any
+   section background. */
+.section--ink .lead { color: #b9c0cf; }
+.partners { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 980px; margin-inline: auto; }
+.partner {
+  background: var(--ink-2);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  color: #b9c0cf;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.partner__logo { display: flex; align-items: center; height: 104px; }
+.partner__logo img { height: 100%; width: auto; max-width: 260px; object-fit: contain; }
+.partner__logo img[alt="Kelele Collective"] { height: 68px; }
+.partner h3 { color: #fff; margin: 6px 0 0; }
+.partner p { margin: 0; font-size: .97rem; }
+.partner .arrow-link { color: var(--gold); margin-top: auto; }
+
 /* --------------------------------------------------------- responsive -- */
 @media (max-width: 980px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -769,6 +792,7 @@ li { margin-bottom: .4em; }
 }
 
 @media (max-width: 860px) {
+  .partners { grid-template-columns: 1fr; }
   .grid--3, .grid--2 { grid-template-columns: 1fr; }
   .split { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }

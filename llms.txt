@@ -1,10 +1,18 @@
 # Uganda Game Developers Association (UGDA)
 
-> The Uganda Game Developers Association (UGDA) is the association for the studios, developers, artists, educators and students making video games in Uganda. It was founded in 2026 and is based in Kampala. Website: https://www.ugda.ug/
+> The Uganda Game Developers Association (UGDA) is the association for the studios, developers, artists, educators and students making video games in Uganda. It was founded in 2026 by Isaac Amumpaire and is based in Kampala. Its partners are Birungi Studio and Kelele Collective. Website: https://www.ugda.ug/
+
+Founder: Isaac Amumpaire, who works at Birungi Studio, founded the UGDA in 2026 after a research trip sponsored by Pro Helvetia, the Swiss Arts Council.
+
+Partners:
+- Birungi Studio (https://birungi.studio/): a social-impact game studio, maker of the game I Bee Xploring.
+- Kelele Collective (https://kelelecollective.org/): a Kampala community for multimedia creatives that organised a meetup on game development in Uganda. Birungi Studio and Kelele Collective have partnered to grow the game development community in Uganda.
+
+On 10 September 2026 the UGDA's founder was invited to the Nordic-Uganda Partnership Day in Kampala, hosted by the embassies of Denmark, Sweden and Iceland, where Kelele Collective screened Ugandan games and ran a micro game pitch challenge.
 
 The UGDA is a new membership association. Membership is open to any company or individual making games in Uganda, or making games from abroad with a Ugandan team. Members are grouped into three divisions: Entertainment, Serious games, and Students & indies. Its programmes (mentoring, industry research, network events, game jams, trade missions and an awards night) are being set up with its first members.
 
-The site also keeps a sourced guide to game development in Uganda: studios such as Kola Studios (maker of Matatu), the teams from Game Jam 2026, and who supports the sector.
+The site also keeps a sourced guide to game development in Uganda: studios such as Kola Studios (maker of Matatu) and Birungi Studio (maker of I Bee Xploring), the teams from Game Jam 2026, community groups such as Kelele Collective, and who supports the sector.
 
 ## Pages
 

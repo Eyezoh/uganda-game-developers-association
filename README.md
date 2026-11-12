@@ -80,7 +80,7 @@ same way they do in production.
 ├── <key>.txt                       IndexNow key (proves to Bing that we own the site)
 ├── css/styles.css                  Whole design system: tokens, components, responsive rules
 ├── js/main.js                      Nav, accordion, scroll reveal
-└── assets/                         Logo, favicon, share image, app icon
+└── assets/                         Logo, favicon, share image, app icon, partners/ logos
 ```
 
 Every page shares the same `<header>` and `<footer>` markup. The current page is
@@ -152,8 +152,10 @@ What only the owner can do (needs your accounts):
 - [ ] **Contact email.** `ugda.ug` has no mail records yet, so no address is shown and
       there are no forms. Set up mail (e.g. `hello@ugda.ug`), then add it to the contact
       page, the footer and the `Organization` structured data.
-- [ ] **Founders / board.** Real names and roles on the About page help both people and
-      search engines trust the site.
+- [ ] **Team.** The founder (Isaac Amumpaire) is on the About page; add board members or
+      other team members as they join.
+- [ ] **Dates** for the Kelele Collective game-development meetup and the Birungi Studio /
+      Kelele Collective partnership (news posts currently say "2026").
 - [ ] **Membership fees**: add real figures once agreed.
 - [ ] **Member directory**: add members as they join.
 - [ ] **Legal status** (e.g. registered non-profit): add once confirmed.
